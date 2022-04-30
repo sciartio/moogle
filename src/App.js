@@ -19,7 +19,7 @@ const App = () => {
   };
 
   useEffect(() => {
-      fetchMovies("captain");
+      fetchMovies("");
   }, []);
 
   return (
@@ -29,11 +29,7 @@ const App = () => {
       {
           movies?.length > 0 ? (
             <MovieContainer movies={movies} />
-          ) : (
-              <div className="empty">
-                  <h2></h2>
-              </div>
-          )
+          ) : ( <></> )
       }
     </div>
   );
